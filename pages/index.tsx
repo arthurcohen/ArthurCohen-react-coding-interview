@@ -23,11 +23,11 @@ const Splash = () => {
     (async () => {
       await execute(DEFAULT_PAGE_SIZE);
     })();
-  });
+  }, []);
 
   useEffect(() => {
     if (initializedPeopleInfo) router.push('/home');
-  }, []);
+  }, [initializedPeopleInfo]);
 
   return (
     <PageHeader
